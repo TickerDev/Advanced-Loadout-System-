@@ -3,8 +3,8 @@ version '1.0.0'
 lua54 'yes'
 game 'gta5'
 
-author "royyalbertFZ#2275"
-description "EL-police-loadout Made By royyalbertFZ#2275"
+author "Echo Labs"
+description "EL-police-loadout"
 
 shared_scripts {
     "config.lua",
