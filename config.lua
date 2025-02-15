@@ -27,7 +27,7 @@ Config.money = "free" -- "cash" or "bank" or "free"
 
 Config.loadout = {
     [1] = {
-        roleID = "1339986711979098123",
+        roleID = "",
         loadoutName = "Cadet",
         Price = 10,
         items = {
@@ -39,7 +39,7 @@ Config.loadout = {
         }
     },
     [2] = {
-        roleID = "1339986788571152518", 
+        roleID = "", 
         loadoutName = "officer",
         Price = 20,
         items = {
