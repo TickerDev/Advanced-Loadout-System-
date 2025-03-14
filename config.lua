@@ -9,7 +9,7 @@ Config.target = 'qb' --ox , qb
 Config.job = "police"  -- The job required
 
 Config.Discord = {
-    DiscordServerID =  , -- Your Discord Server ID
+    DiscordServerID =  "", -- Your Discord Server ID
 
     DiscordBotToken = "", -- Your Discord Bot Token
 
