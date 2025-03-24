@@ -4,7 +4,7 @@ local Core = exports[''..Config.Framework.scriptName]:GetCoreObject()
 
 ---- functions ----
 function CheckRole(DiscordID, source)
-    PerformHttpRequest("https://discordapp.com/api/guilds/" .. Config.Discord.DiscordServerID .. "/members/"..string.sub(DiscordID, 9), function(err, text, headers) 
+    PerformHttpRequest("https://discordapp.com/api/guilds/" .. Discord.DiscordServerID .. "/members/"..string.sub(DiscordID, 9), function(err, text, headers) 
         if err == 200 then
             local member = json.decode(text)
             local memberRoleNames, memberRoleNamesCounter = '', 0
@@ -19,26 +19,26 @@ function CheckRole(DiscordID, source)
         else
             print("Failed to fetch Discord roles: " .. err)
         end
-    end, "GET", "", {["Content-type"] = "application/json", ["Authorization"] = "Bot " .. Config.Discord.DiscordBotToken})
+    end, "GET", "", {["Content-type"] = "application/json", ["Authorization"] = "Bot " .. Discord.DiscordBotToken})
 end
 
 function DiscordLog(message)
     local embed = {
     {
-      ["color"] = Config.Discord.color, 
+      ["color"] = Discord.color, 
       ["title"] = "Echo Labs Police loadout",
       ["description"] = message,
       ["url"] = "https://discord.gg/ydQFeNyuBK",
       ["footer"] = {
       ["text"] = "By Echo Labs",
-      ["icon_url"] = Config.Discord.Image,
+      ["icon_url"] = Discord.Image,
       },
        ["thumbnail"] = {
-       ["url"] = Config.Discord.Image,
+       ["url"] = Discord.Image,
       },
     }
   }
-    PerformHttpRequest(Config.Discord.WebHook, function(err, text, headers) end, 'POST', json.encode({username = 'EL-Police-loadout', embeds = embed, avatar_url = Config.Image}), { ['Content-Type'] = 'application/json' })
+    PerformHttpRequest(Discord.WebHook, function(err, text, headers) end, 'POST', json.encode({username = 'EL-Police-loadout', embeds = embed, avatar_url = Config.Image}), { ['Content-Type'] = 'application/json' })
 end
 
 ---- Events ----
