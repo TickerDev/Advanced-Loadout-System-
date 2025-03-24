@@ -8,18 +8,6 @@ Config.target = 'qb' --ox , qb
 
 Config.job = "police"  -- The job required
 
-Config.Discord = {
-    DiscordServerID =  "", -- Your Discord Server ID
-
-    DiscordBotToken = "", -- Your Discord Bot Token
-
-    WebHook = "",  -- Your WebHook URL for logs
-
-    Image = "", -- Your Server Image URL  (96px x 96px)
-
-    color = 1432462
-}
-
 Config.money = "free" -- "cash" or "bank" or "free"
     -- cash: the player needs to pay in cash to get the loadout
     -- bank: the player needs to pay from their bank account to get the loadout
